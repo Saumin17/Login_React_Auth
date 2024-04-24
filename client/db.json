@@ -1,5 +1,24 @@
 {
-    "user": [
-      
-    ]
-  }
+  "user": [
+    {
+      "id": "Saumin17",
+      "name": "Saumin Das",
+      "password": "Cars@1234",
+      "email": "saumin17@gmail.com",
+      "phone": "1234567890",
+      "country": "",
+      "address": "",
+      "gender": "female"
+    },
+    {
+      "id": "Saumin17",
+      "name": "Saumin Das",
+      "password": "Cars@1234",
+      "email": "saumin17@gmail.com",
+      "phone": "1234567890",
+      "country": "",
+      "address": "",
+      "gender": "male"
+    }
+  ]
+}
