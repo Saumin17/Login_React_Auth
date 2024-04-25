@@ -11,14 +11,50 @@
       "gender": "female"
     },
     {
-      "id": "Saumin17",
-      "name": "Saumin Das",
+      "id": "wa4nv86e1",
+      "name": "Raj M",
+      "email": "raj@gmail.com",
       "password": "Cars@1234",
-      "email": "saumin17@gmail.com",
+      "phone": "1234567890",
+      "country": "",
+      "address": "asdfgh",
+      "gender": "male"
+    },
+    {
+      "id": "Anish10",
+      "name": "Anish",
+      "email": "anish@gmail.com",
+      "password": "Cars@1234",
       "phone": "1234567890",
       "country": "",
       "address": "",
       "gender": "male"
+    },
+    {
+      "id": "Saumin17",
+      "name": "Saumin Das",
+      "email": "saumin@gmail.com",
+      "password": "Cars@1234",
+      "phone": "1234543212",
+      "country": "",
+      "address": "",
+      "gender": "male"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "Iphone",
+      "description": "phone",
+      "price": "1200",
+      "quantity": "2"
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy",
+      "description": "djabdjka",
+      "price": "2000",
+      "quantity": "3"
     }
   ]
 }

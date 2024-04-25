@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     
-    const[username,usernamechange]=useState("");
+    const[email,emailchange]=useState("");
     const[password,passwordchange]=useState("");
     
     const usenavigate = useNavigate();
@@ -17,18 +17,26 @@ const Login = () => {
     const ProceedLogin = (e) =>{
         e.preventDefault();
         if(validate()){
-            fetch("http://localhost:8000/user/"+username).then((res)=>{
+            fetch("http://localhost:8000/login", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+            }).then((res)=>{
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 return res.json();
-
             }).then((resp)=>{
                 console.log(resp)
                 if(Object.keys(resp).length===0){
-                    toast.error('Please enter valid username');
+                    toast.error('Please enter valid email');
                 }
                 else{
                     if(resp.password===password){
                         toast.success('Successfully Logged in!')
-                        sessionStorage.setItem("username",username);
+                        sessionStorage.setItem("email",email);
                         usenavigate('/')
                     }
                     else{
@@ -44,9 +52,9 @@ const Login = () => {
 
     const validate = () => {
         let result=true;
-        if(username === null || username ===''){
+        if(email === null || email ===''){
             result = false;
-            toast.warning("Please enter username");
+            toast.warning("Please enter email");
         }
         if(password === null || password ===''){
             result = false;
@@ -64,8 +72,8 @@ const Login = () => {
                         </div>
                         <div className="card-body">
                             <div className="form-group">
-                                <label>Username<span className="errmsg">*</span></label>
-                                <input value={username} onChange={e=>usernamechange(e.target.value)} className="form-control"></input>
+                                <label>email<span className="errmsg">*</span></label>
+                                <input value={email} onChange={e=>emailchange(e.target.value)} className="form-control"></input>
                             </div>
                             <div className="form-group">
                                 <label>Password<span className="errmsg">*</span></label>

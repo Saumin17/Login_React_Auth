@@ -1,14 +1,16 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import AddProduct from './AddProduct';
+import ProductList from './ProductList';
 
 
 const Home = () => {
     const usenavigate = useNavigate();
 
     useEffect(()=>{
-        let username = sessionStorage.getItem("username");
-        if(username === null || username ===""){
+        let email = sessionStorage.getItem("email");
+        if(email === null || email ===""){
             usenavigate('/login');
         }
     },[]);
@@ -20,6 +22,9 @@ const Home = () => {
                 <Link style={{float: "right"}} to={'/login'}>Logout</Link>
             </div>
             <h1 className="text-center">Welcome to my homepage</h1>
+            <h1 className="text-center">----------------------</h1>
+            <AddProduct />
+            <ProductList />
         </div>
     );
 }
