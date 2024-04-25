@@ -1,19 +1,18 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import AddProduct from './AddProduct';
 import ProductList from './ProductList';
 
-
-const Home = () => {
-    const usenavigate = useNavigate();
+const Home: React.FC = () => {
+    const navigate = useNavigate();
 
     useEffect(()=>{
         let email = sessionStorage.getItem("email");
         if(email === null || email ===""){
-            usenavigate('/login');
+            navigate('/login');
         }
-    },[]);
+    },[navigate]);
 
     return(
         <div>
@@ -29,4 +28,4 @@ const Home = () => {
     );
 }
 
-export default  Home;
+export default Home;

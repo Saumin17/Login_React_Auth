@@ -39,22 +39,17 @@
       "country": "",
       "address": "",
       "gender": "male"
-    }
-  ],
-  "product": [
-    {
-      "id": "1",
-      "name": "Iphone",
-      "description": "phone",
-      "price": "1200",
-      "quantity": "2"
     },
     {
-      "id": "2",
-      "name": "Samsung Galaxy",
-      "description": "djabdjka",
-      "price": "2000",
-      "quantity": "3"
+      "id": "Kajal12",
+      "name": "Kajal Modi",
+      "email": "kajal@gmail.com",
+      "password": "Cars@1234",
+      "phone": "9876543211",
+      "country": "",
+      "address": "",
+      "gender": "female"
     }
-  ]
+  ],
+  "product": []
 }
