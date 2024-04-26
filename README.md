@@ -30,8 +30,8 @@ To use the project, follow these steps:
 
 6. On your browser use link: http://localhost:3000/
 
-##Instructions
+## Instructions
 
 Watch video: https://drive.google.com/drive/folders/14r0HmGWbCHyTK4KxxjbrgkRCnmy9CeTk?usp=sharing
 
-#Thank You!
+# Thank You!
